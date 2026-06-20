@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Video 🎤</title>
+<meta charset="UTF-8">
+<title>Her Voice 🎤</title>
+
 <style>
 body{
   margin:0;
@@ -9,32 +11,87 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  background:linear-gradient(135deg,#1c1c1c,#434343);
+  background:#0b0c10;
   font-family:Arial;
   color:white;
+  overflow:hidden;
+}
+
+/* soft glow background */
+.bg-glow{
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle,#ff4d6d55,transparent 70%);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  filter:blur(40px);
+}
+
+/* card */
+.card{
+  z-index:2;
+  width:90%;
+  max-width:600px;
   text-align:center;
 }
 
+/* title */
+h1{
+  font-size:28px;
+  letter-spacing:2px;
+  margin-bottom:20px;
+  color:#ffffffcc;
+}
+
+/* video style */
 video{
-  width:90%;
-  max-width:500px;
-  border-radius:15px;
+  width:100%;
+  border-radius:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.8);
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+/* caption */
+p{
+  margin-top:15px;
+  color:#aaaaaa;
+  font-size:14px;
+}
+
+/* button */
+a{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  border-radius:25px;
+  background:#ff4d6d;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+a:hover{
+  transform:scale(1.05);
 }
 </style>
 </head>
 
 <body>
 
-<div>
-  <h1>🎤 Her Singing Video</h1>
+<div class="bg-glow"></div>
+
+<div class="card">
+  <h1>🎤 HER VOICE</h1>
 
   <video controls>
     <source src="video.mp4" type="video/mp4">
   </video>
 
-  <p>Special moment 💙</p>
+  <p>A moment that feels like emotion, not just sound 💙</p>
 
-  <a href="message.html">Next 💌</a>
+  <a href="index.html">← Back Home</a>
 </div>
 
 </body>
