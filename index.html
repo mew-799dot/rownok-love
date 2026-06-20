@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Rownok ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #ff4b7d;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+p {
+  font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="page1">
+  <h1>Hey Rownok 😌</h1>
+  <p>I have something special for you...</p>
+  <button onclick="nextPage()">Click me</button>
+</div>
+
+<div class="container hidden" id="page2">
+  <h1>💖</h1>
+  <p>Out of all the people in this world,<br>you became my favorite...</p>
+  <button onclick="nextPage2()">Next</button>
+</div>
+
+<div class="container hidden" id="page3">
+  <h1>🥺</h1>
+  <p>Every moment with you feels different,<br>feels special...</p>
+  <button onclick="nextPage3()">Next</button>
+</div>
+
+<div class="container hidden" id="page4">
+  <h1>✨</h1>
+  <p>I don’t know how you did it,<br>but you became my happiness...</p>
+  <button onclick="showLove()">Last click</button>
+</div>
+
+<div class="container hidden" id="final">
+  <h1>I Love You Rownok ❤️</h1>
+  <p>Forever and always... just you 🫶</p>
+</div>
+
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function nextPage() {
+  document.getElementById('page1').classList.add('hidden');
+  document.getElementById('page2').classList.remove('hidden');
+}
+
+function nextPage2() {
+  document.getElementById('page2').classList.add('hidden');
+  document.getElementById('page3').classList.remove('hidden');
+}
+
+function nextPage3() {
+  document.getElementById('page3').classList.add('hidden');
+  document.getElementById('page4').classList.remove('hidden');
+}
+
+function showLove() {
+  document.getElementById('page4').classList.add('hidden');
+  document.getElementById('final').classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
